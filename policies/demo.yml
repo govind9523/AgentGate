@@ -1,0 +1,35 @@
+version: demo-v1
+default_decision: DENY
+rules:
+  - id: deny-production-writes
+    description: Demo writes cannot reach production.
+    match: {is_write: true, environment: production}
+    decision: DENY
+  - id: deny-injection
+    description: Instruction-like untrusted content needs review.
+    match: {finding_category: [prompt_injection, argument_safety]}
+    decision: DENY
+  - id: redact-sensitive-data
+    description: Remove secrets and personal data before proceeding.
+    match: {finding_category: [secret, pii]}
+    decision: REDACT_AND_CONTINUE
+  - id: allow-own-order-reads
+    description: Permit registered reads within the caller tenant.
+    match: {operation: read, same_tenant: true, environment: [development, staging, production]}
+    decision: ALLOW
+  - id: allow-demo-writes
+    description: Explicit support writes to synthetic customer records only.
+    match: {tool: [refund_payment, update_customer_email, send_email], same_tenant: true, environment: [development, staging]}
+    decision: ALLOW
+  - id: approve-large-refunds
+    description: Refunds of at least 1000 USD need a human.
+    match: {tool: refund_payment, amount_gte: 1000}
+    decision: REQUIRE_HUMAN_APPROVAL
+  - id: approve-contact-changes
+    description: Contact changes and outbound messages need a human.
+    match: {tool: [update_customer_email, send_email]}
+    decision: REQUIRE_HUMAN_APPROVAL
+  - id: approve-staging-writes
+    description: All staging mutations need a human.
+    match: {is_write: true, environment: staging}
+    decision: REQUIRE_HUMAN_APPROVAL

@@ -1,0 +1,790 @@
+{
+  "run_id": "3c8c8458-0a0a-4d2a-afd9-f99b94132717",
+  "repository": "Google-DSC-DMCE/Vulnerable-Flask-App",
+  "mode": "evidence",
+  "status": "completed",
+  "summary": "Collected 9 evidence sources; checked 2 exact dependencies. Status: completed.",
+  "sources": [
+    {
+      "data": {
+        "full_name": "Google-DSC-DMCE/Vulnerable-Flask-App",
+        "description": null,
+        "stargazers_count": 0,
+        "forks_count": 1,
+        "open_issues_count": 4,
+        "archived": false,
+        "language": "Python",
+        "updated_at": "2023-10-15T10:04:30Z",
+        "default_branch": "main"
+      },
+      "sha256": "db2f9e4c5427f4e9eb1aed1bb66cab3555562ce4749c322e09681f2b8dbfbe05",
+      "fetched_at": "2026-09-15T16:21:27.799747+00:00",
+      "url": "https://api.github.com/repos/Google-DSC-DMCE/Vulnerable-Flask-App",
+      "kind": "metadata",
+      "source_id": "source-1"
+    },
+    {
+      "data": {
+        "sha": "3af74de2b5473fa2e6e84e65b8f83511fa630acf"
+      },
+      "sha256": "0ea244265295d8b30854625523c97da8297440d17f3c7cbffb02bafd383d66d0",
+      "fetched_at": "2026-09-15T16:21:28.270814+00:00",
+      "url": "https://api.github.com/repos/Google-DSC-DMCE/Vulnerable-Flask-App/commits/HEAD",
+      "kind": "commit",
+      "source_id": "source-2"
+    },
+    {
+      "data": [
+        {
+          "number": 4,
+          "title": "Updated requirements.txt",
+          "state": "open",
+          "tag_name": null,
+          "published_at": null,
+          "created_at": "2023-10-16T12:40:35Z",
+          "updated_at": "2023-10-16T12:40:35Z",
+          "body": "Werkzeug version was not mentioned in the requirements file. Following which werkzeug=3.x.x version was getting installed. But it was causing import error and not working as intended. werkzeug=2.2.2 works fine with flask=2.0.1 and solves the import error."
+        },
+        {
+          "number": 3,
+          "title": "Update Home Page Greeting for Logged-in Users",
+          "state": "open",
+          "tag_name": null,
+          "published_at": null,
+          "created_at": "2023-10-15T09:56:28Z",
+          "updated_at": "2023-10-23T08:29:58Z",
+          "body": "## Description:\r\nThe current implementation of the home page lacks a personalized greeting for users upon successful login. This issue focuses on updating the `home.html` file to display a personalized welcome message for logged-in users. By providing a warm and personalized greeting, we can enhance the user experience and create a more engaging environment for our application users.\r\n\r\n### Proposed Changes:\r\n\r\n1. Update the `home.html` file to include a personalized greeting for the logged-in user.\r\n2. Display the username dynamically in the greeting to create a more personalized experience.\r\n3. Ensure the greeting is visible and prominently positioned on the home page for immediate user engagement.\r\n\r\n### Expected Outcome:\r\n\r\nBy implementing this change, we aim to create a more welcoming and user-friendly environment for our application users. A personalized greeting will enhance the overall user experience and foster a sense of connection and engagement with our platform.\r\n\r\n### Additional Information:\r\n\r\n- Application version: [e.g., v1.0.0]\r\n- Platform: [e.g., Web, Mobile]\r\n- Relevant design or content guidelines: [mention any specific design or content guidelines to follow for the greeting]\r\n\r\nContributions and suggestions for improving the user greeting on the home page are highly appreciated. Let's work together to create a more personalized and engaging experience for our users.\r\n"
+        },
+        {
+          "number": 2,
+          "title": "Enhance User Interface for Better User Experience",
+          "state": "open",
+          "tag_name": null,
+          "published_at": null,
+          "created_at": "2023-10-15T09:44:29Z",
+          "updated_at": "2023-10-15T09:54:47Z",
+          "body": "## Description:\r\nThe current user interface (UI) of the application needs improvements to enhance the overall user experience. The aim is to create a more intuitive and visually appealing interface that aligns with modern design standards. This issue is focused on refining the UI elements, layouts, and styling to provide a more engaging and user-friendly experience for our application users.\r\n\r\n### Areas for Improvement:\r\n\r\n- Refine the layout and structure of the application pages.\r\n- Update the styling to ensure consistency and modern aesthetics.\r\n- Enhance the user interaction elements for improved usability.\r\n- Optimize the responsiveness of the UI for different screen sizes and devices.\r\n\r\n### Proposed Changes:\r\n\r\n1. Implement a responsive design approach to ensure a seamless user experience across various devices.\r\n2. Enhance the visual elements, such as typography, color schemes, and iconography, to create a visually appealing interface.\r\n3. Simplify the navigation and improve the accessibility of important features for users.\r\n\r\n### Expected Outcome:\r\n\r\nBy enhancing the UI, we aim to create a more user-friendly and visually appealing application interface that enhances user engagement and satisfaction.\r\n\r\n### Additional Information:\r\n\r\n- Application version: [e.g., v1.0.0]\r\n- Platform: [e.g., Web, Mobile]\r\n- Relevant design guidelines or preferences: [mention any specific design guidelines to follow or preferences for the UI]\r\n\r\nContributions and suggestions for improving the UI design are highly appreciated. Let's work together to create an exceptional user experience for our application users.\r\n"
+        },
+        {
+          "number": 1,
+          "title": "Fix SQL Injection Vulnerability in Login Feature",
+          "state": "open",
+          "tag_name": null,
+          "published_at": null,
+          "created_at": "2023-10-15T09:38:35Z",
+          "updated_at": "2023-10-15T09:57:03Z",
+          "body": "The login feature in the application is vulnerable to SQL injection attacks, allowing unauthorized access to the system. This poses a significant security risk and compromises the integrity of user authentication. The issue needs to be addressed promptly to ensure the security and privacy of user data.\r\n\r\n### Steps to Reproduce:\r\n\r\n1. Access the login page.\r\n2. Enter the following SQL injection payload in the username field:\r\n' OR '1'='1'--\r\n3. Submit the form and observe the behavior.\r\n\r\n### Expected Behavior:\r\n\r\nThe application should prevent SQL injection attacks and only allow valid user authentication.\r\n\r\n### Current Behavior:\r\n\r\nThe application is susceptible to SQL injection, allowing unauthorized users to bypass authentication and gain access to the system.\r\n\r\n### Impact:\r\n\r\nThe SQL injection vulnerability poses a security risk, potentially exposing sensitive data and compromising the application's security.\r\n\r\n### Proposed Solution:\r\n\r\nImplement input validation and prepared statements to prevent SQL injection attacks in the login feature.\r\n\r\n### Additional Information:\r\n\r\n- Application version: [e.g., v1.0.0]\r\n- Platform: [e.g., Windows, Linux]\r\n- Steps taken to reproduce the issue: [provide details if applicable]\r\n- Any other relevant information: [add here if necessary]\r\n\r\nPlease contribute to the resolution of this issue by providing insights, code changes, or suggestions for improving the security of the application.\r\n"
+        }
+      ],
+      "sha256": "35d324ee940b141d47f64a224a64278bc1580ad7854dddea244d2e8c29e32068",
+      "fetched_at": "2026-09-15T16:21:28.694409+00:00",
+      "url": "https://api.github.com/repos/Google-DSC-DMCE/Vulnerable-Flask-App/issues?state=all&per_page=10",
+      "kind": "issues",
+      "source_id": "source-3"
+    },
+    {
+      "data": [
+        {
+          "number": 4,
+          "title": "Updated requirements.txt",
+          "state": "open",
+          "tag_name": null,
+          "published_at": null,
+          "created_at": "2023-10-16T12:40:35Z",
+          "updated_at": "2023-10-16T12:40:35Z",
+          "body": "Werkzeug version was not mentioned in the requirements file. Following which werkzeug=3.x.x version was getting installed. But it was causing import error and not working as intended. werkzeug=2.2.2 works fine with flask=2.0.1 and solves the import error."
+        }
+      ],
+      "sha256": "9beac5da20ca09cb7a1f6dd4b959a7e4935ae913de4823c840569a650f1eeb0e",
+      "fetched_at": "2026-09-15T16:21:29.134249+00:00",
+      "url": "https://api.github.com/repos/Google-DSC-DMCE/Vulnerable-Flask-App/pulls?state=all&per_page=10",
+      "kind": "pulls",
+      "source_id": "source-4"
+    },
+    {
+      "data": [],
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "fetched_at": "2026-09-15T16:21:29.474102+00:00",
+      "url": "https://api.github.com/repos/Google-DSC-DMCE/Vulnerable-Flask-App/releases?per_page=5",
+      "kind": "releases",
+      "source_id": "source-5"
+    },
+    {
+      "data": [
+        {
+          "name": ".gitattributes",
+          "type": "file"
+        },
+        {
+          "name": "README.md",
+          "type": "file"
+        },
+        {
+          "name": "create_db.py",
+          "type": "file"
+        },
+        {
+          "name": "main.py",
+          "type": "file"
+        },
+        {
+          "name": "output_file.sql",
+          "type": "file"
+        },
+        {
+          "name": "requirements.txt",
+          "type": "file"
+        },
+        {
+          "name": "templates",
+          "type": "dir"
+        }
+      ],
+      "sha256": "e7b0bb83bfecc7a1f9bcacf04750c831d1b476fff39525a07439cf750eac362d",
+      "fetched_at": "2026-09-15T16:21:29.795833+00:00",
+      "url": "https://api.github.com/repos/Google-DSC-DMCE/Vulnerable-Flask-App/contents?ref=3af74de2b5473fa2e6e84e65b8f83511fa630acf",
+      "kind": "root",
+      "source_id": "source-6"
+    },
+    {
+      "data": {
+        "dependencies": [
+          {
+            "ecosystem": "PyPI",
+            "name": "Flask",
+            "version": "2.0.1",
+            "source_path": "requirements.txt"
+          },
+          {
+            "ecosystem": "PyPI",
+            "name": "mysql-connector-python",
+            "version": "8.0.26",
+            "source_path": "requirements.txt"
+          }
+        ],
+        "omitted": 0,
+        "path": "requirements.txt",
+        "commit": "3af74de2b5473fa2e6e84e65b8f83511fa630acf"
+      },
+      "sha256": "849fc54cee16aa5a5be4c8ff6464da802b96318a038d0ca55c75937b80f86ce2",
+      "fetched_at": "2026-09-15T16:21:30.095022+00:00",
+      "url": "https://api.github.com/repos/Google-DSC-DMCE/Vulnerable-Flask-App/contents/requirements.txt?ref=3af74de2b5473fa2e6e84e65b8f83511fa630acf",
+      "kind": "requirements.txt",
+      "source_id": "source-7"
+    },
+    {
+      "data": {
+        "complete": true,
+        "vulnerabilities": [
+          {
+            "id": "GHSA-68rp-wp8r-4726",
+            "summary": "Flask session does not add `Vary: Cookie` header when accessed in some ways",
+            "url": "https://osv.dev/vulnerability/GHSA-68rp-wp8r-4726"
+          },
+          {
+            "id": "GHSA-m2qf-hxjv-5gpq",
+            "summary": "Flask vulnerable to possible disclosure of permanent session cookie due to missing Vary: Cookie header",
+            "url": "https://osv.dev/vulnerability/GHSA-m2qf-hxjv-5gpq"
+          },
+          {
+            "id": "PYSEC-2023-62",
+            "summary": "",
+            "url": "https://osv.dev/vulnerability/PYSEC-2023-62"
+          },
+          {
+            "id": "PYSEC-2026-2151",
+            "summary": "",
+            "url": "https://osv.dev/vulnerability/PYSEC-2026-2151"
+          }
+        ],
+        "advisories_omitted": 0
+      },
+      "sha256": "f090f60251deef6431dbdbd0b79fe554ad45ca79f6d44bb445f2b0c9a4722737",
+      "fetched_at": "2026-09-15T16:21:30.955313+00:00",
+      "url": "https://osv.dev",
+      "kind": "vulnerability_query",
+      "source_id": "source-8"
+    },
+    {
+      "data": {
+        "complete": true,
+        "vulnerabilities": [
+          {
+            "id": "GHSA-hgjp-83m4-h4fj",
+            "summary": "MySQL Connector/Python connector takeover vulnerability",
+            "url": "https://osv.dev/vulnerability/GHSA-hgjp-83m4-h4fj"
+          },
+          {
+            "id": "PYSEC-2026-1685",
+            "summary": "MySQL Connector/Python connector takeover vulnerability",
+            "url": "https://osv.dev/vulnerability/PYSEC-2026-1685"
+          }
+        ],
+        "advisories_omitted": 0
+      },
+      "sha256": "a292473aba6e9fe9d6d1bdb98941518b019e20cb6a7a5bc8ef2cf4761e976c7c",
+      "fetched_at": "2026-09-15T16:21:31.427075+00:00",
+      "url": "https://osv.dev",
+      "kind": "vulnerability_query",
+      "source_id": "source-9"
+    }
+  ],
+  "calls": [
+    {
+      "decision": "ALLOW",
+      "decision_id": "7d575e06-f034-4b72-bea3-ec8fb48d04d4",
+      "request_id": "c7e01a4f-7729-4c69-9ce2-9cac7a137917",
+      "trace_id": "f9f255342e7e4665811388db1303a4ec",
+      "tool_name": "github_research",
+      "tool_version": "1.0.0",
+      "actor_id": "support-agent",
+      "tenant_id": "tenant-demo",
+      "environment": "development",
+      "matched_rule_ids": [
+        "allow-public-research"
+      ],
+      "findings": [],
+      "risk_score": 10,
+      "explanation": "support-agent requested github_research in development for tenant-demo. Rules: allow-public-research. ALLOW; explicit allow is required and deny takes precedence. Risk 10/100 is explanatory, not authorization. Tool server was contacted after authorization.",
+      "executed": true,
+      "approval_id": null,
+      "policy_version": "public-research-v1",
+      "redacted_arguments": {
+        "repository": "Google-DSC-DMCE/Vulnerable-Flask-App",
+        "resource": "metadata"
+      },
+      "result": {
+        "success": true,
+        "data": {
+          "data": {
+            "full_name": "Google-DSC-DMCE/Vulnerable-Flask-App",
+            "description": null,
+            "stargazers_count": 0,
+            "forks_count": 1,
+            "open_issues_count": 4,
+            "archived": false,
+            "language": "Python",
+            "updated_at": "2023-10-15T10:04:30Z",
+            "default_branch": "main"
+          },
+          "sha256": "db2f9e4c5427f4e9eb1aed1bb66cab3555562ce4749c322e09681f2b8dbfbe05",
+          "fetched_at": "2026-09-15T16:21:27.799747+00:00",
+          "url": "https://api.github.com/repos/Google-DSC-DMCE/Vulnerable-Flask-App",
+          "kind": "metadata"
+        },
+        "error_code": null
+      },
+      "duration_ms": 753.873
+    },
+    {
+      "decision": "ALLOW",
+      "decision_id": "19eef7c4-faff-4745-80a5-c4798d79ba01",
+      "request_id": "c7e01a4f-7729-4c69-9ce2-9cac7a137917",
+      "trace_id": "acea57dac7be4895be3dc2eea8ddab77",
+      "tool_name": "github_research",
+      "tool_version": "1.0.0",
+      "actor_id": "support-agent",
+      "tenant_id": "tenant-demo",
+      "environment": "development",
+      "matched_rule_ids": [
+        "allow-public-research"
+      ],
+      "findings": [],
+      "risk_score": 10,
+      "explanation": "support-agent requested github_research in development for tenant-demo. Rules: allow-public-research. ALLOW; explicit allow is required and deny takes precedence. Risk 10/100 is explanatory, not authorization. Tool server was contacted after authorization.",
+      "executed": true,
+      "approval_id": null,
+      "policy_version": "public-research-v1",
+      "redacted_arguments": {
+        "repository": "Google-DSC-DMCE/Vulnerable-Flask-App",
+        "resource": "commit"
+      },
+      "result": {
+        "success": true,
+        "data": {
+          "data": {
+            "sha": "3af74de2b5473fa2e6e84e65b8f83511fa630acf"
+          },
+          "sha256": "0ea244265295d8b30854625523c97da8297440d17f3c7cbffb02bafd383d66d0",
+          "fetched_at": "2026-09-15T16:21:28.270814+00:00",
+          "url": "https://api.github.com/repos/Google-DSC-DMCE/Vulnerable-Flask-App/commits/HEAD",
+          "kind": "commit"
+        },
+        "error_code": null
+      },
+      "duration_ms": 469.484
+    },
+    {
+      "decision": "ALLOW",
+      "decision_id": "e8dc3c00-86cd-43c1-aa61-ba12382c475e",
+      "request_id": "c7e01a4f-7729-4c69-9ce2-9cac7a137917",
+      "trace_id": "0fd4d8e286054782bccd92926853f4a2",
+      "tool_name": "github_research",
+      "tool_version": "1.0.0",
+      "actor_id": "support-agent",
+      "tenant_id": "tenant-demo",
+      "environment": "development",
+      "matched_rule_ids": [
+        "allow-public-research"
+      ],
+      "findings": [],
+      "risk_score": 10,
+      "explanation": "support-agent requested github_research in development for tenant-demo. Rules: allow-public-research. ALLOW; explicit allow is required and deny takes precedence. Risk 10/100 is explanatory, not authorization. Tool server was contacted after authorization.",
+      "executed": true,
+      "approval_id": null,
+      "policy_version": "public-research-v1",
+      "redacted_arguments": {
+        "repository": "Google-DSC-DMCE/Vulnerable-Flask-App",
+        "resource": "issues"
+      },
+      "result": {
+        "success": true,
+        "data": {
+          "data": [
+            {
+              "number": 4,
+              "title": "Updated requirements.txt",
+              "state": "open",
+              "tag_name": null,
+              "published_at": null,
+              "created_at": "2023-10-16T12:40:35Z",
+              "updated_at": "2023-10-16T12:40:35Z",
+              "body": "Werkzeug version was not mentioned in the requirements file. Following which werkzeug=3.x.x version was getting installed. But it was causing import error and not working as intended. werkzeug=2.2.2 works fine with flask=2.0.1 and solves the import error."
+            },
+            {
+              "number": 3,
+              "title": "Update Home Page Greeting for Logged-in Users",
+              "state": "open",
+              "tag_name": null,
+              "published_at": null,
+              "created_at": "2023-10-15T09:56:28Z",
+              "updated_at": "2023-10-23T08:29:58Z",
+              "body": "## Description:\r\nThe current implementation of the home page lacks a personalized greeting for users upon successful login. This issue focuses on updating the `home.html` file to display a personalized welcome message for logged-in users. By providing a warm and personalized greeting, we can enhance the user experience and create a more engaging environment for our application users.\r\n\r\n### Proposed Changes:\r\n\r\n1. Update the `home.html` file to include a personalized greeting for the logged-in user.\r\n2. Display the username dynamically in the greeting to create a more personalized experience.\r\n3. Ensure the greeting is visible and prominently positioned on the home page for immediate user engagement.\r\n\r\n### Expected Outcome:\r\n\r\nBy implementing this change, we aim to create a more welcoming and user-friendly environment for our application users. A personalized greeting will enhance the overall user experience and foster a sense of connection and engagement with our platform.\r\n\r\n### Additional Information:\r\n\r\n- Application version: [e.g., v1.0.0]\r\n- Platform: [e.g., Web, Mobile]\r\n- Relevant design or content guidelines: [mention any specific design or content guidelines to follow for the greeting]\r\n\r\nContributions and suggestions for improving the user greeting on the home page are highly appreciated. Let's work together to create a more personalized and engaging experience for our users.\r\n"
+            },
+            {
+              "number": 2,
+              "title": "Enhance User Interface for Better User Experience",
+              "state": "open",
+              "tag_name": null,
+              "published_at": null,
+              "created_at": "2023-10-15T09:44:29Z",
+              "updated_at": "2023-10-15T09:54:47Z",
+              "body": "## Description:\r\nThe current user interface (UI) of the application needs improvements to enhance the overall user experience. The aim is to create a more intuitive and visually appealing interface that aligns with modern design standards. This issue is focused on refining the UI elements, layouts, and styling to provide a more engaging and user-friendly experience for our application users.\r\n\r\n### Areas for Improvement:\r\n\r\n- Refine the layout and structure of the application pages.\r\n- Update the styling to ensure consistency and modern aesthetics.\r\n- Enhance the user interaction elements for improved usability.\r\n- Optimize the responsiveness of the UI for different screen sizes and devices.\r\n\r\n### Proposed Changes:\r\n\r\n1. Implement a responsive design approach to ensure a seamless user experience across various devices.\r\n2. Enhance the visual elements, such as typography, color schemes, and iconography, to create a visually appealing interface.\r\n3. Simplify the navigation and improve the accessibility of important features for users.\r\n\r\n### Expected Outcome:\r\n\r\nBy enhancing the UI, we aim to create a more user-friendly and visually appealing application interface that enhances user engagement and satisfaction.\r\n\r\n### Additional Information:\r\n\r\n- Application version: [e.g., v1.0.0]\r\n- Platform: [e.g., Web, Mobile]\r\n- Relevant design guidelines or preferences: [mention any specific design guidelines to follow or preferences for the UI]\r\n\r\nContributions and suggestions for improving the UI design are highly appreciated. Let's work together to create an exceptional user experience for our application users.\r\n"
+            },
+            {
+              "number": 1,
+              "title": "Fix SQL Injection Vulnerability in Login Feature",
+              "state": "open",
+              "tag_name": null,
+              "published_at": null,
+              "created_at": "2023-10-15T09:38:35Z",
+              "updated_at": "2023-10-15T09:57:03Z",
+              "body": "The login feature in the application is vulnerable to SQL injection attacks, allowing unauthorized access to the system. This poses a significant security risk and compromises the integrity of user authentication. The issue needs to be addressed promptly to ensure the security and privacy of user data.\r\n\r\n### Steps to Reproduce:\r\n\r\n1. Access the login page.\r\n2. Enter the following SQL injection payload in the username field:\r\n' OR '1'='1'--\r\n3. Submit the form and observe the behavior.\r\n\r\n### Expected Behavior:\r\n\r\nThe application should prevent SQL injection attacks and only allow valid user authentication.\r\n\r\n### Current Behavior:\r\n\r\nThe application is susceptible to SQL injection, allowing unauthorized users to bypass authentication and gain access to the system.\r\n\r\n### Impact:\r\n\r\nThe SQL injection vulnerability poses a security risk, potentially exposing sensitive data and compromising the application's security.\r\n\r\n### Proposed Solution:\r\n\r\nImplement input validation and prepared statements to prevent SQL injection attacks in the login feature.\r\n\r\n### Additional Information:\r\n\r\n- Application version: [e.g., v1.0.0]\r\n- Platform: [e.g., Windows, Linux]\r\n- Steps taken to reproduce the issue: [provide details if applicable]\r\n- Any other relevant information: [add here if necessary]\r\n\r\nPlease contribute to the resolution of this issue by providing insights, code changes, or suggestions for improving the security of the application.\r\n"
+            }
+          ],
+          "sha256": "35d324ee940b141d47f64a224a64278bc1580ad7854dddea244d2e8c29e32068",
+          "fetched_at": "2026-09-15T16:21:28.694409+00:00",
+          "url": "https://api.github.com/repos/Google-DSC-DMCE/Vulnerable-Flask-App/issues?state=all&per_page=10",
+          "kind": "issues"
+        },
+        "error_code": null
+      },
+      "duration_ms": 424.227
+    },
+    {
+      "decision": "ALLOW",
+      "decision_id": "119572c8-1ca1-4f0c-842f-55c38eea058d",
+      "request_id": "c7e01a4f-7729-4c69-9ce2-9cac7a137917",
+      "trace_id": "4ccb19a91fbc4a4db575c20bcbdbded4",
+      "tool_name": "github_research",
+      "tool_version": "1.0.0",
+      "actor_id": "support-agent",
+      "tenant_id": "tenant-demo",
+      "environment": "development",
+      "matched_rule_ids": [
+        "allow-public-research"
+      ],
+      "findings": [],
+      "risk_score": 10,
+      "explanation": "support-agent requested github_research in development for tenant-demo. Rules: allow-public-research. ALLOW; explicit allow is required and deny takes precedence. Risk 10/100 is explanatory, not authorization. Tool server was contacted after authorization.",
+      "executed": true,
+      "approval_id": null,
+      "policy_version": "public-research-v1",
+      "redacted_arguments": {
+        "repository": "Google-DSC-DMCE/Vulnerable-Flask-App",
+        "resource": "pulls"
+      },
+      "result": {
+        "success": true,
+        "data": {
+          "data": [
+            {
+              "number": 4,
+              "title": "Updated requirements.txt",
+              "state": "open",
+              "tag_name": null,
+              "published_at": null,
+              "created_at": "2023-10-16T12:40:35Z",
+              "updated_at": "2023-10-16T12:40:35Z",
+              "body": "Werkzeug version was not mentioned in the requirements file. Following which werkzeug=3.x.x version was getting installed. But it was causing import error and not working as intended. werkzeug=2.2.2 works fine with flask=2.0.1 and solves the import error."
+            }
+          ],
+          "sha256": "9beac5da20ca09cb7a1f6dd4b959a7e4935ae913de4823c840569a650f1eeb0e",
+          "fetched_at": "2026-09-15T16:21:29.134249+00:00",
+          "url": "https://api.github.com/repos/Google-DSC-DMCE/Vulnerable-Flask-App/pulls?state=all&per_page=10",
+          "kind": "pulls"
+        },
+        "error_code": null
+      },
+      "duration_ms": 434.703
+    },
+    {
+      "decision": "ALLOW",
+      "decision_id": "11cd7108-96b8-4874-aaea-14c3432e5c70",
+      "request_id": "c7e01a4f-7729-4c69-9ce2-9cac7a137917",
+      "trace_id": "220a3eef85154601abeaf8d93fe3e3d1",
+      "tool_name": "github_research",
+      "tool_version": "1.0.0",
+      "actor_id": "support-agent",
+      "tenant_id": "tenant-demo",
+      "environment": "development",
+      "matched_rule_ids": [
+        "allow-public-research"
+      ],
+      "findings": [],
+      "risk_score": 10,
+      "explanation": "support-agent requested github_research in development for tenant-demo. Rules: allow-public-research. ALLOW; explicit allow is required and deny takes precedence. Risk 10/100 is explanatory, not authorization. Tool server was contacted after authorization.",
+      "executed": true,
+      "approval_id": null,
+      "policy_version": "public-research-v1",
+      "redacted_arguments": {
+        "repository": "Google-DSC-DMCE/Vulnerable-Flask-App",
+        "resource": "releases"
+      },
+      "result": {
+        "success": true,
+        "data": {
+          "data": [],
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "fetched_at": "2026-09-15T16:21:29.474102+00:00",
+          "url": "https://api.github.com/repos/Google-DSC-DMCE/Vulnerable-Flask-App/releases?per_page=5",
+          "kind": "releases"
+        },
+        "error_code": null
+      },
+      "duration_ms": 338.43
+    },
+    {
+      "decision": "ALLOW",
+      "decision_id": "44ccad3d-3e98-41be-bc0f-24ed3c3be658",
+      "request_id": "c7e01a4f-7729-4c69-9ce2-9cac7a137917",
+      "trace_id": "2af3614c05c9451692c3ae9633d1bcf9",
+      "tool_name": "github_research",
+      "tool_version": "1.0.0",
+      "actor_id": "support-agent",
+      "tenant_id": "tenant-demo",
+      "environment": "development",
+      "matched_rule_ids": [
+        "allow-public-research"
+      ],
+      "findings": [],
+      "risk_score": 10,
+      "explanation": "support-agent requested github_research in development for tenant-demo. Rules: allow-public-research. ALLOW; explicit allow is required and deny takes precedence. Risk 10/100 is explanatory, not authorization. Tool server was contacted after authorization.",
+      "executed": true,
+      "approval_id": null,
+      "policy_version": "public-research-v1",
+      "redacted_arguments": {
+        "repository": "Google-DSC-DMCE/Vulnerable-Flask-App",
+        "resource": "root"
+      },
+      "result": {
+        "success": true,
+        "data": {
+          "data": [
+            {
+              "name": ".gitattributes",
+              "type": "file"
+            },
+            {
+              "name": "README.md",
+              "type": "file"
+            },
+            {
+              "name": "create_db.py",
+              "type": "file"
+            },
+            {
+              "name": "main.py",
+              "type": "file"
+            },
+            {
+              "name": "output_file.sql",
+              "type": "file"
+            },
+            {
+              "name": "requirements.txt",
+              "type": "file"
+            },
+            {
+              "name": "templates",
+              "type": "dir"
+            }
+          ],
+          "sha256": "e7b0bb83bfecc7a1f9bcacf04750c831d1b476fff39525a07439cf750eac362d",
+          "fetched_at": "2026-09-15T16:21:29.795833+00:00",
+          "url": "https://api.github.com/repos/Google-DSC-DMCE/Vulnerable-Flask-App/contents?ref=3af74de2b5473fa2e6e84e65b8f83511fa630acf",
+          "kind": "root"
+        },
+        "error_code": null
+      },
+      "duration_ms": 322.202
+    },
+    {
+      "decision": "ALLOW",
+      "decision_id": "5dc57b4e-e258-4a71-9391-2c5dc6fd51ed",
+      "request_id": "c7e01a4f-7729-4c69-9ce2-9cac7a137917",
+      "trace_id": "f89dbf8eedd9422e82f5f63234dc95a1",
+      "tool_name": "github_research",
+      "tool_version": "1.0.0",
+      "actor_id": "support-agent",
+      "tenant_id": "tenant-demo",
+      "environment": "development",
+      "matched_rule_ids": [
+        "allow-public-research"
+      ],
+      "findings": [],
+      "risk_score": 10,
+      "explanation": "support-agent requested github_research in development for tenant-demo. Rules: allow-public-research. ALLOW; explicit allow is required and deny takes precedence. Risk 10/100 is explanatory, not authorization. Tool server was contacted after authorization.",
+      "executed": true,
+      "approval_id": null,
+      "policy_version": "public-research-v1",
+      "redacted_arguments": {
+        "repository": "Google-DSC-DMCE/Vulnerable-Flask-App",
+        "resource": "requirements.txt"
+      },
+      "result": {
+        "success": true,
+        "data": {
+          "data": {
+            "dependencies": [
+              {
+                "ecosystem": "PyPI",
+                "name": "Flask",
+                "version": "2.0.1",
+                "source_path": "requirements.txt"
+              },
+              {
+                "ecosystem": "PyPI",
+                "name": "mysql-connector-python",
+                "version": "8.0.26",
+                "source_path": "requirements.txt"
+              }
+            ],
+            "omitted": 0,
+            "path": "requirements.txt",
+            "commit": "3af74de2b5473fa2e6e84e65b8f83511fa630acf"
+          },
+          "sha256": "849fc54cee16aa5a5be4c8ff6464da802b96318a038d0ca55c75937b80f86ce2",
+          "fetched_at": "2026-09-15T16:21:30.095022+00:00",
+          "url": "https://api.github.com/repos/Google-DSC-DMCE/Vulnerable-Flask-App/contents/requirements.txt?ref=3af74de2b5473fa2e6e84e65b8f83511fa630acf",
+          "kind": "requirements.txt"
+        },
+        "error_code": null
+      },
+      "duration_ms": 297.142
+    },
+    {
+      "decision": "ALLOW",
+      "decision_id": "6a743613-a174-4d30-b19c-1c36f74f2966",
+      "request_id": "c7e01a4f-7729-4c69-9ce2-9cac7a137917",
+      "trace_id": "b2766f966b10456796f5522a0db826b2",
+      "tool_name": "osv_lookup",
+      "tool_version": "1.0.0",
+      "actor_id": "support-agent",
+      "tenant_id": "tenant-demo",
+      "environment": "development",
+      "matched_rule_ids": [
+        "allow-public-research"
+      ],
+      "findings": [],
+      "risk_score": 10,
+      "explanation": "support-agent requested osv_lookup in development for tenant-demo. Rules: allow-public-research. ALLOW; explicit allow is required and deny takes precedence. Risk 10/100 is explanatory, not authorization. Tool server was contacted after authorization.",
+      "executed": true,
+      "approval_id": null,
+      "policy_version": "public-research-v1",
+      "redacted_arguments": {
+        "repository": "Google-DSC-DMCE/Vulnerable-Flask-App",
+        "ecosystem": "PyPI",
+        "name": "Flask",
+        "version": "2.0.1"
+      },
+      "result": {
+        "success": true,
+        "data": {
+          "data": {
+            "complete": true,
+            "vulnerabilities": [
+              {
+                "id": "GHSA-68rp-wp8r-4726",
+                "summary": "Flask session does not add `Vary: Cookie` header when accessed in some ways",
+                "url": "https://osv.dev/vulnerability/GHSA-68rp-wp8r-4726"
+              },
+              {
+                "id": "GHSA-m2qf-hxjv-5gpq",
+                "summary": "Flask vulnerable to possible disclosure of permanent session cookie due to missing Vary: Cookie header",
+                "url": "https://osv.dev/vulnerability/GHSA-m2qf-hxjv-5gpq"
+              },
+              {
+                "id": "PYSEC-2023-62",
+                "summary": "",
+                "url": "https://osv.dev/vulnerability/PYSEC-2023-62"
+              },
+              {
+                "id": "PYSEC-2026-2151",
+                "summary": "",
+                "url": "https://osv.dev/vulnerability/PYSEC-2026-2151"
+              }
+            ],
+            "advisories_omitted": 0
+          },
+          "sha256": "f090f60251deef6431dbdbd0b79fe554ad45ca79f6d44bb445f2b0c9a4722737",
+          "fetched_at": "2026-09-15T16:21:30.955313+00:00",
+          "url": "https://osv.dev",
+          "kind": "vulnerability_query"
+        },
+        "error_code": null
+      },
+      "duration_ms": 861.655
+    },
+    {
+      "decision": "ALLOW",
+      "decision_id": "b49a1833-7962-4e14-9f59-c7dd449ba63b",
+      "request_id": "c7e01a4f-7729-4c69-9ce2-9cac7a137917",
+      "trace_id": "0bfa4e2486824006a98afac991e2057f",
+      "tool_name": "osv_lookup",
+      "tool_version": "1.0.0",
+      "actor_id": "support-agent",
+      "tenant_id": "tenant-demo",
+      "environment": "development",
+      "matched_rule_ids": [
+        "allow-public-research"
+      ],
+      "findings": [],
+      "risk_score": 10,
+      "explanation": "support-agent requested osv_lookup in development for tenant-demo. Rules: allow-public-research. ALLOW; explicit allow is required and deny takes precedence. Risk 10/100 is explanatory, not authorization. Tool server was contacted after authorization.",
+      "executed": true,
+      "approval_id": null,
+      "policy_version": "public-research-v1",
+      "redacted_arguments": {
+        "repository": "Google-DSC-DMCE/Vulnerable-Flask-App",
+        "ecosystem": "PyPI",
+        "name": "mysql-connector-python",
+        "version": "8.0.26"
+      },
+      "result": {
+        "success": true,
+        "data": {
+          "data": {
+            "complete": true,
+            "vulnerabilities": [
+              {
+                "id": "GHSA-hgjp-83m4-h4fj",
+                "summary": "MySQL Connector/Python connector takeover vulnerability",
+                "url": "https://osv.dev/vulnerability/GHSA-hgjp-83m4-h4fj"
+              },
+              {
+                "id": "PYSEC-2026-1685",
+                "summary": "MySQL Connector/Python connector takeover vulnerability",
+                "url": "https://osv.dev/vulnerability/PYSEC-2026-1685"
+              }
+            ],
+            "advisories_omitted": 0
+          },
+          "sha256": "a292473aba6e9fe9d6d1bdb98941518b019e20cb6a7a5bc8ef2cf4761e976c7c",
+          "fetched_at": "2026-09-15T16:21:31.427075+00:00",
+          "url": "https://osv.dev",
+          "kind": "vulnerability_query"
+        },
+        "error_code": null
+      },
+      "duration_ms": 467.48
+    }
+  ],
+  "dependencies": [
+    {
+      "ecosystem": "PyPI",
+      "name": "Flask",
+      "version": "2.0.1",
+      "source_path": "requirements.txt",
+      "status": "checked",
+      "vulnerabilities": [
+        {
+          "id": "GHSA-68rp-wp8r-4726",
+          "summary": "Flask session does not add `Vary: Cookie` header when accessed in some ways",
+          "url": "https://osv.dev/vulnerability/GHSA-68rp-wp8r-4726"
+        },
+        {
+          "id": "GHSA-m2qf-hxjv-5gpq",
+          "summary": "Flask vulnerable to possible disclosure of permanent session cookie due to missing Vary: Cookie header",
+          "url": "https://osv.dev/vulnerability/GHSA-m2qf-hxjv-5gpq"
+        },
+        {
+          "id": "PYSEC-2023-62",
+          "summary": "",
+          "url": "https://osv.dev/vulnerability/PYSEC-2023-62"
+        },
+        {
+          "id": "PYSEC-2026-2151",
+          "summary": "",
+          "url": "https://osv.dev/vulnerability/PYSEC-2026-2151"
+        }
+      ],
+      "source_id": "source-8"
+    },
+    {
+      "ecosystem": "PyPI",
+      "name": "mysql-connector-python",
+      "version": "8.0.26",
+      "source_path": "requirements.txt",
+      "status": "checked",
+      "vulnerabilities": [
+        {
+          "id": "GHSA-hgjp-83m4-h4fj",
+          "summary": "MySQL Connector/Python connector takeover vulnerability",
+          "url": "https://osv.dev/vulnerability/GHSA-hgjp-83m4-h4fj"
+        },
+        {
+          "id": "PYSEC-2026-1685",
+          "summary": "MySQL Connector/Python connector takeover vulnerability",
+          "url": "https://osv.dev/vulnerability/PYSEC-2026-1685"
+        }
+      ],
+      "source_id": "source-9"
+    }
+  ],
+  "limitations": [
+    "Public unauthenticated APIs only; rate limits and partial responses remain visible.",
+    "At most 10 issues, 10 pull requests, 5 releases, 100 root entries and 20 exact dependencies; no pagination.",
+    "Only root requirements.txt exact pins and npm package-lock packages maps; ranges, markers, nested manifests and unresolved dependencies omitted.",
+    "No repository code executes. Vulnerability absence is not a security assessment."
+  ],
+  "model": null,
+  "metrics": {
+    "http_requests": 9,
+    "bytes": 72835,
+    "dependencies_checked": 2,
+    "duration_ms": 4383.87
+  },
+  "repository_metadata": {
+    "full_name": "Google-DSC-DMCE/Vulnerable-Flask-App",
+    "description": null,
+    "stargazers_count": 0,
+    "forks_count": 1,
+    "open_issues_count": 4,
+    "archived": false,
+    "language": "Python",
+    "updated_at": "2023-10-15T10:04:30Z",
+    "default_branch": "main"
+  },
+  "commit_sha": "3af74de2b5473fa2e6e84e65b8f83511fa630acf"
+}
