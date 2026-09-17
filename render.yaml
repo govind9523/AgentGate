@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: agentgate
+    runtime: docker
+    plan: free
+    envVars:
+      - key: AGENTGATE_ENV
+        value: production
+      - key: AGENTGATE_PUBLIC_DEMO
+        value: "true"
+      - key: AGENTGATE_DEV_MODE
+        value: "false"
+      - key: AGENTGATE_RESEARCH_ENABLED
+        value: "true"
+      - key: AGENTGATE_ALLOWED_HOSTS
+        value: '["localhost","127.0.0.1","*.onrender.com"]'
